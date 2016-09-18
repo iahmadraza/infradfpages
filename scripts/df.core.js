@@ -314,7 +314,7 @@ $(function () {
 	});
 
 	//Favorite list toggle 
-	$('body').on('click', 'div.fav-overlay>div.fav-action>a.btn-fav-action', function (e) {
+	$('body').off('click').on('click', 'div.fav-overlay>div.fav-action>a.btn-fav-action', function (e) {
 		if (!$(this).hasClass('fav-is-active')) {
 			$(this).addClass('fav-is-active');
 			$('div.fav-overlay-bg').fadeIn();
@@ -327,7 +327,7 @@ $(function () {
 			$('body').css('overflow', 'auto');
 		};
 	});
-	$('body').on('click', 'div.fav-overlay-bg', function (e) {
+	$('body').off('click').on('click', 'div.fav-overlay-bg', function (e) {
 		$('div.fav-overlay>div.fav-action>a.btn-fav-action').trigger('click');
 	});
 
